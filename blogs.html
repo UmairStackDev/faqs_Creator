@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Testing </title>
+    <meta name="description" content="lorem ipsum is ggood thing">
+
+    <meta name="keywords" content="mobileapp,newtone,crm">
+    <link rel="canonical" href="http://127.0.0.1:8000/blogs/healthcare-crm-modern-patient-management" />
+
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="google-site-verification" content="gdVlUhrCh8_zvOHFPhVsjBpTkzjzJw13R7h9TaXVqTE" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" rel="preload"
+        as="style" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/contactus.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link as="style" rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link as="style" rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W49HV2BPVF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('js', new Date());
+        gtag('config', 'G-W49HV2BPVF');
+    </script>
+    <link rel="stylesheet" href="assets/styles/home.css">
+
+</head>
+
+<body class="">
+    <main class="about">
+
+
+
+
+        <style>
+            @media (max-width: 1200px) {
+
+                .navbar .rating,
+                .navbar .contact {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    justify-content: center !important;
+                    text-align: center;
+                }
+
+                .navbar .contact {
+                    flex-wrap: wrap;
+                    gap: 8px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .trustpilot {
+                    display: none !important;
+                }
+
+                .email-text,
+                .speak-text {
+                    display: none !important;
+                }
+
+                .salesEmail i,
+                .salesNumber i {
+                    font-size: 18px;
+                    color: orange;
+                    margin-right: 4px;
+                }
+
+                .requestCallBack {
+                    display: flex;
+                    align-items: center;
+                    background-color: #333;
+                    border-radius: 30px;
+                    padding: 5px 10px;
+                    gap: 6px;
+                    color: #fff;
+                }
+
+                .requestCallBack img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                }
+
+                .requestCallBack span {
+                    display: inline !important;
+                    font-size: 14px;
+                    white-space: nowrap;
+                }
+            }
+
+            @media (max-width: 388px) {
+                .navbar {
+                    padding: 13px !important;
+                }
+            }
+
+            .floating {
+                position: fixed;
+                top: 20px;
+                z-index: 1000;
+            }
+
+            .stop-sticky {
+                position: absolute !important;
+                bottom: 0;
+                top: auto !important;
+            }
+
+            .center-content {
+                height: 100%;
+                padding: 30px;
+                background: linear-gradient(#fff, #eee);
+            }
+
+            @media (max-width: 991px) {
+
+                .floating,
+                .stop-sticky {
+                    position: static !important;
+                    width: 100% !important;
+                }
+            }
+
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background: #fff;
+                padding: 40px;
+                color: #1a1a1a;
+                line-height: 1.6;
+            }
+
+            .blog-container {
+                max-width: 800px;
+                margin: auto;
+                position: relative;
+            }
+
+            .header-meta {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                color: #444;
+            }
+
+            .header-meta img {
+                width: 22px;
+                margin-right: 10px;
+            }
+
+            .blog-title {
+                font-size: 32px;
+                font-weight: 700;
+                margin: 15px 0;
+                color: #042a2b;
+            }
+
+            .updated-date {
+                font-size: 14px;
+                margin: 8px 0;
+                color: #444;
+            }
+
+            .dropdown-toggle {
+                position: absolute;
+                top: 20px;
+                right: 0;
+                cursor: pointer;
+                font-size: 22px;
+                background: none;
+                border: none;
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                top: 50px;
+                right: 0;
+                background: #fff;
+                border: 1px solid #ddd;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+                border-radius: 8px;
+                display: none;
+                z-index: 999;
+            }
+
+            .dropdown-menu.active {
+                display: block;
+            }
+
+            .dropdown-menu div {
+                padding: 10px 16px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .dropdown-menu div:hover {
+                background: #f5f5f5;
+            }
+
+            .blog-section h2 {
+                font-size: 24px;
+                margin-top: 30px;
+                font-weight: 700;
+            }
+
+            .blog-section p {
+                font-size: 16px;
+                margin-top: 15px;
+            }
+
+            .dropdown-menu a {
+                color: #333;
+                text-decoration: none;
+                padding: 6px 0;
+                font-size: 14px;
+            }
+
+            .dropdown-menu a:hover {
+                color: #DC9401;
+            }
+
+            .social-circle {
+                width: 48px;
+                height: 48px;
+                background-color: #3b5998;
+                color: white;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+                text-decoration: none;
+                border: none;
+            }
+
+            .social-circle:hover {
+                transform: scale(1.1);
+                opacity: 0.9;
+            }
+
+            .social-circle.twitter {
+                background-color: #1DA1F2;
+            }
+
+            .social-circle.linkedin {
+                background-color: #0077B5;
+            }
+
+            .social-circle.dark {
+                background-color: #333;
+            }
+
+            /* --- Custom CSS for the exact FAQ replica --- */
+
+            body {
+                /* Using 'Inter' font for the entire page to match the modern look */
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+                background-color: #ffffff;
+                color: #212529;
+                /* Standard dark text color */
+            }
+
+            .faq-container {
+                /* Using Bootstrap's container for responsive width and centering */
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+
+            /* Main "FAQs" Heading Style */
+            .faq-header {
+                font-weight: 700;
+                /* Bold font weight */
+                font-size: 2.75rem;
+                /* Large font size, matching the image */
+                margin-bottom: 2rem;
+                /* Space below the heading */
+            }
+
+            /* Styling for each individual FAQ item (<details> tag) */
+            .faq-item {
+                border-bottom: 1px solid #dee2e6;
+                /* Light grey border between items */
+            }
+
+            /* Last item should not have a border at the bottom */
+            .faq-item:last-child {
+                border-bottom: none;
+            }
+
+            /* The clickable question area (<summary> tag) */
+            .faq-question {
+                font-size: 1.15rem;
+                /* Font size for the question */
+                font-weight: 600;
+                /* Semi-bold to make it stand out */
+                padding: 1.5rem 0;
+                /* Vertical padding for spacing */
+                cursor: pointer;
+                position: relative;
+                /* Needed for custom icon positioning */
+                list-style: none;
+                /* Removes the default triangle marker */
+                display: block;
+                /* Ensures it takes full width */
+            }
+
+            /* Hiding the default arrow/marker from browsers like Chrome/Safari */
+            .faq-question::-webkit-details-marker {
+                display: none;
+            }
+
+            /* Custom Arrow Icon using a pseudo-element */
+            .faq-question::before {
+                content: '>';
+                font-family: monospace;
+                /* Using monospace for a clean chevron look */
+                font-size: 1.25rem;
+                font-weight: bold;
+                position: absolute;
+                left: -25px;
+                /* Position to the left of the text */
+                top: 50%;
+                transform: translateY(-50%) rotate(0deg);
+                /* Initial state (closed) */
+                transition: transform 0.2s ease-in-out;
+                /* Smooth rotation animation */
+                color: #495057;
+            }
+
+            /* Rotating the icon when the FAQ item is open */
+            .faq-item[open] .faq-question::before {
+                transform: translateY(-50%) rotate(90deg);
+                /* Rotated state (open) */
+            }
+
+            /* The answer text container */
+            .faq-answer {
+                padding-bottom: 1.5rem;
+                /* Space at the bottom of the answer */
+                padding-left: 0;
+                /* Aligning with the question */
+                font-size: 1rem;
+                /* Standard paragraph font size */
+                line-height: 1.6;
+                /* For better readability */
+                color: #495057;
+                /* Slightly lighter text color for the answer */
+            }
+        </style>
+        <section class="blogs-section section-spacing pt-0" id="blogsSection">
+            <div class="container position-relative">
+                <div class="row">
+
+
+
+                    <!-- Center Content -->
+                    <div class="col-lg-8">
+                        <div class="blog-container">
+                            <div class="header-meta">
+                                <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Author Icon" />
+                                <span>Leanware Editorial Team · 23 min read</span>
+                                <button class="dropdown-toggle" onclick="toggleDropdown()">⋮</button>
+                                <div class="dropdown-menu" id="dropdownMenu">
+                                    <div onclick="openShareModal()">
+                                        📤 Share Post
+                                    </div>
+                                    <div onclick="window.print()">
+                                        🖨️ Print Post
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <h1 class="blog-title">Custom Web Application Development: What You Need to Know</h1>
+                            <div class="updated-date">Updated: May 9</div>
+
+                            <div class="blog-section">
+                                <p>
+                                    Custom web application development means building software tailored exactly to how
+                                    your business operates—no bloated features, no one-size-fits-all compromises. Unlike
+                                    generic software, custom apps are designed from scratch to align with specific
+                                    workflows, objectives, and challenges.
+                                </p>
+
+                                <p>
+                                    They’re built to grow with you, adapt to your workflows, and keep your data
+                                    safe—perfect for teams who want tools that actually fit. Whether you want to
+                                    automate operations, improve efficiency, or differentiate your brand, custom web
+                                    development provides a solution built to fit your exact requirements.
+                                </p>
+
+                                <p>
+                                    This guide highlights everything you need to know to make informed decisions about
+                                    custom web development.
+                                </p>
+
+                                <h2>What Are Custom Web Applications?</h2>
+                                <p>
+                                    Think of custom web apps as your business’s digital twin—built from the ground up to
+                                    solve your specific challenges, not everyone else’s. Unlike off-the-shelf software,
+                                    which...
+                                </p>
+                                <div class="faq-container">
+                                    <div class="faq_content">
+                                        <h1 class="faq-header">FAQs</h1>
+                                        <details class="faq-item" open>
+                                            <summary class="faq-question">What is custom web application development?
+                                            </summary>
+                                            <div class="faq-answer">
+                                                <p>Custom web application development involves creating tailored
+                                                    software solutions to meet specific business needs. Unlike generic
+                                                    applications, these are built to fit unique workflows and processes,
+                                                    offering more flexibility and efficiency.</p>
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right Form -->
+                    <div class="col-lg-4 position-relative" id="rightStickyWrapper">
+                        <div class="p-3   rounded " id="rightForm">
+                            <div class="modal-content p-3">
+                                <div class="modal-header border-0">
+                                    <div class="d-flex align-items-start w-100">
+                                        <img src="https://randomuser.me/api/portraits/men/1.jpg"
+                                            class="rounded-circle me-3" style="width: 60px; height: 60px;"
+                                            alt="Agent" />
+                                        <div>
+                                            <h5 class=" fw-semibold m-0" style="color: #DC9401;">Request a Call Back
+                                            </h5>
+                                            <p class="small text-muted mb-0">Enter your contact details and one of our
+                                                friendly team
+                                                members will be in touch soon!</p>
+                                        </div>
+                                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                </div>
+
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label class="form-label">Name <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" placeholder="Name" required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Email <span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" placeholder="Email" required>
+                                        </div>
+
+                                        <div class="mb-3 d-flex flex-column">
+                                            <label class="form-label">WhatsApp No <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="tel" id="phone" class="form-control" required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Interested In <span
+                                                    class="text-danger">*</span></label>
+                                            <select class="form-select" required>
+                                                <option value="">-- Select the Service --</option>
+                                                <option value="CRM">CRM</option>
+                                                <option value="Websites">Websites</option>
+                                                <option value="Web Applications">Web Applications</option>
+                                                <option value="Mobile Apps">Mobile Apps</option>
+                                                <option value="Logo Designs">Logo Designs</option>
+                                                <option value="E-Commerce Websites">E-Commerce Websites</option>
+
+                                            </select>
+                                        </div>
+
+                                        <div class="text-center">
+                                            <button type="submit" class="btn request_a_call w-100"
+                                                style="background-image: linear-gradient(to bottom, #DC9401, #F9B938);color: #fff;">REQUEST
+                                                A CALL BACK</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Share Modal -->
+        <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-center py-4 px-3" style="border-radius: 10px;">
+                    <h6 class="fw-bold mb-4">Share Post</h6>
+                    <div class="d-flex justify-content-center gap-4 flex-wrap">
+                        <a id="fbLink" target="_blank" class="social-circle" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a id="twitterLink" target="_blank" class="social-circle twitter" title="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a id="linkedinLink" target="_blank" class="social-circle linkedin" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <button onclick="copyToClipboard()" class="social-circle dark" title="Copy Link">
+                            <i class="fas fa-link"></i>
+                        </button>
+                    </div>
+                    <div id="copyMsg" class="text-success small mt-3" style="display: none;">Link copied!</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </main>
+
+
+
+    <script>
+        function toggleDropdown() {
+            const menu = document.getElementById("dropdownMenu");
+            menu.classList.toggle("active");
+        }
+
+        function openShareModal() {
+            const url = window.location.href;
+            document.getElementById('fbLink').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+            document.getElementById('twitterLink').href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=Check this out!`;
+            document.getElementById('linkedinLink').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+
+            const shareModal = new bootstrap.Modal(document.getElementById('shareModal'));
+            shareModal.show();
+        }
+
+        function copyToClipboard() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                const msg = document.getElementById("copyMsg");
+                msg.style.display = "block";
+                setTimeout(() => {
+                    msg.style.display = "none";
+                }, 2000);
+            });
+        }
+
+        document.addEventListener('click', function (e) {
+            const menu = document.getElementById("dropdownMenu");
+            const toggle = document.querySelector('.dropdown-toggle');
+            if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                menu.classList.remove("active");
+            }
+        });
+    </script>
+
+
+    <script>
+        const blogsSection = document.getElementById("blogsSection");
+        const leftForm = document.getElementById("leftForm");
+        const rightForm = document.getElementById("rightForm");
+        const leftWrapper = document.getElementById("leftStickyWrapper");
+        const rightWrapper = document.getElementById("rightStickyWrapper");
+
+        window.addEventListener("scroll", () => {
+            const sectionTop = blogsSection.offsetTop;
+            const sectionBottom = sectionTop + blogsSection.offsetHeight;
+
+            const scrollY = window.scrollY;
+            const formHeight = leftForm.offsetHeight;
+
+            const shouldStick = scrollY > sectionTop && scrollY + formHeight + 20 < sectionBottom;
+
+            if (shouldStick) {
+                leftForm.classList.add("floating");
+                leftForm.classList.remove("stop-sticky");
+
+                rightForm.classList.add("floating");
+                rightForm.classList.remove("stop-sticky");
+
+                // width fix
+                leftForm.style.width = leftWrapper.offsetWidth + "px";
+                rightForm.style.width = rightWrapper.offsetWidth + "px";
+            } else if (scrollY + formHeight + 20 >= sectionBottom) {
+                leftForm.classList.remove("floating");
+                leftForm.classList.add("stop-sticky");
+
+                rightForm.classList.remove("floating");
+                rightForm.classList.add("stop-sticky");
+            } else {
+                leftForm.classList.remove("floating", "stop-sticky");
+                rightForm.classList.remove("floating", "stop-sticky");
+
+                leftForm.style.width = "100%";
+                rightForm.style.width = "100%";
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" defer></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        defer></script>
+
+    <script src="/assets/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"
+        defer></script>
+
+    <!-- intlTelInput JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <!-- Initialize Phone Input -->
+    <script>
+        const input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            separateDialCode: true,
+            initialCountry: "gb", // UK Default
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+
+    </script>
+
+    <script>
+        var phoneInput = document.getElementById("phone_2");
+        var iti = window.intlTelInput(phoneInput, {
+            separateDialCode: true,
+            initialCountry: "gb",
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+    </script>
+    <script>
+        var phoneInput = document.getElementById("phone_3");
+        var iti = window.intlTelInput(phoneInput, {
+            separateDialCode: true,
+            initialCountry: "gb",
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.testimonials-slider').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                dots: false
+            });
+            $('.plans-slider').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                autoplay: false,
+                arrows: false,
+            });
+            $('.service-slider').slick({
+                infinite: true,
+                slidesToShow: 10,
+                slidesToScroll: 1,
+                dots: false,
+                autoplay: false,
+                arrows: false,
+            });
+        });
+    </script>
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMJCVM84" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const stickyElement = document.getElementById('mainHeader');
+
+            if (window.scrollY > 0) {
+                stickyElement.style.backgroundColor = '#fff';
+                stickyElement.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                stickyElement.style.paddingTop = '0';
+                stickyElement.style.paddingBottom = '0';
+            } else {
+                stickyElement.style.backgroundColor = 'transparent';
+                stickyElement.style.boxShadow = 'none';
+                stickyElement.style.paddingTop = '1.5rem';
+                stickyElement.style.paddingBottom = '1.5rem';
+            }
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.logo-slider').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 1700,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 868,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+    <script defer type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>
+    <script>
+        var url = 'https://widget.bot.space/js/widget.js';
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = url;
+        var options = {
+            "enabled": true,
+            "chatButtonSetting": {
+                "backgroundColor": "#13C656",
+                "ctaText": "Chat Now",
+                "borderRadius": "25",
+                "marginLeft": "20",
+                "marginBottom": "20",
+                "marginRight": "20",
+                "position": "left"
+            },
+            "brandSetting": {
+                "brandName": "CoderChaps",
+                "brandSubTitle": "Typically replies within a minute",
+                "brandImg": "https://widget.bot.space/images/BotSpaceLogoLight.png",
+                "welcomeText": " Hi, thanks for contacting us. It will be our pleasure to help you out.",
+                "messageText": "Hello, I have a question about",
+                "backgroundColor": "#085E54",
+                "ctaText": "Send",
+                "borderRadius": "25",
+                "autoShow": false,
+                "phoneNumber": "447532831272"
+            }
+        };
+        s.onload = function () {
+            CreateWhatsappChatWidget(options);
+        };
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x); </script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+    <?php
+    $meta_keywords = '';
+    if (!empty($blog->tags)) {
+        foreach ($blog->tags as $k => $v) {
+            $meta_keywords .= $v->name;
+            $meta_keywords .= (($k + 1) === count($blog->tags)) ? '' : ',';
+        }
+    }
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        @if(!empty($blog->meta) and is_array($blog->meta))
+            <title> {{ $blog->meta['title'] ?? '' }} </title>
+            <meta name="description" content="{!! $blog->meta['description'] ?? '' !!}">
+
+            <meta name="keywords" content="{!! $meta_keywords !!}">
+            <link rel="canonical" href="{!! $blog->meta['canonical_link'] ?? '' !!}"/>
+            
+        @endif
+
+        {{--Inner Page Header Scripts--}}
+        {!! $configurations->global_header_scripts !!}
+        {!! $pageDetail->head_scripts ?? '' !!}
+        <style>
+        
+                .floating {
+                    position: fixed;
+                    top: 20px;
+                    z-index: 1000;
+                }
+            .blogs-section{
+                padding-top: 60px !important;
+            
+            }
+                .stop-sticky {
+                    position: absolute !important;
+                    bottom: 0;
+                    top: auto !important;
+                }
+
+                .center-content {
+                    height: 100%;
+                    padding: 30px;
+                    background: linear-gradient(#fff, #eee);
+                }
+
+                @media (max-width: 991px) {
+
+                    .floating,
+                    .stop-sticky {
+                        position: static !important;
+                        width: 100% !important;
+                    }
+                }
+        </style>
+    </head>
+    <body class="">
+    <main class="{{ $pageDetail->mainClassName }}">
+        {!! $pageDetail->headerHtml->html_with ?? '' !!}
+        <section class="blogs-section section-spacing pt-0">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Left Form -->
+                    <div class="col-lg-3 position-relative" id="leftStickyWrapper">
+                        <div class="p-3 bg-white border rounded shadow-sm" id="leftForm">
+                            <div class="from-content p-3">
+                                <div class="form-header border-0">
+                                    <div class="d-flex align-items-start w-100">
+                                        <img src="https://randomuser.me/api/portraits/men/1.jpg"
+                                            class="rounded-circle me-3" style="width: 60px; height: 60px;"
+                                            alt="Agent" />
+                                        <div>
+                                            <h5 class=" fw-semibold m-0" style="color: #DC9401;">Request a Call Back
+                                            </h5>
+                                            <p class="small text-muted mb-0">Enter your contact details and one of our
+                                                friendly team
+                                                members will be in touch soon!</p>
+                                        </div>
+                                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                </div>
+                                <div class="form-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label class="form-label">Name <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" placeholder="Name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Email <span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" placeholder="Email" required>
+                                        </div>
+                                        <div class="mb-3 d-flex flex-column">
+                                            <label class="form-label">WhatsApp No <span
+                                                        class="text-danger">*</span></label>
+                                            <input type="tel" id="phone" class="form-control" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Interested In <span
+                                                        class="text-danger">*</span></label>
+                                            <select class="form-select" required>
+                                                <option value="">-- Select the Service --</option>
+                                                <option value="CRM">CRM</option>
+                                                <option value="Websites">Websites</option>
+                                                <option value="Web Applications">Web Applications</option>
+                                                <option value="Mobile Apps">Mobile Apps</option>
+                                                <option value="Logo Designs">Logo Designs</option>
+                                                <option value="E-Commerce Websites">E-Commerce Websites</option>
+                                            </select>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn request_a_call w-100"
+                                                    style="background-image: linear-gradient(to bottom, #DC9401, #F9B938);color: #fff;">REQUEST
+                                                A CALL BACK</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-8">
+                        {!! $blog->body !!}
+                        
+                    
+                    </div>
+                    <!-- Right Form -->
+                    <div class="col-lg-3 position-relative" id="rightStickyWrapper">
+                        <div class="p-3 bg-white border rounded shadow-sm" id="rightForm">
+                            <div class="form-content p-3">
+                                <div class="form-header border-0">
+                                    <div class="d-flex align-items-start w-100">
+                                        <img src="https://randomuser.me/api/portraits/men/1.jpg"
+                                            class="rounded-circle me-3" style="width: 60px; height: 60px;"
+                                            alt="Agent" />
+                                        <div>
+                                            <h5 class=" fw-semibold m-0" style="color: #DC9401;">Request a Call Back
+                                            </h5>
+                                            <p class="small text-muted mb-0">Enter your contact details and one of our
+                                                friendly team
+                                                members will be in touch soon!</p>
+                                        </div>
+                                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                </div>
+                                <div class="form-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label class="form-label">Name <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" placeholder="Name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Email <span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" placeholder="Email" required>
+                                        </div>
+                                        <div class="mb-3 d-flex flex-column">
+                                            <label class="form-label">WhatsApp No <span
+                                                        class="text-danger">*</span></label>
+                                            <input type="tel" id="phone" class="form-control" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Interested In <span
+                                                        class="text-danger">*</span></label>
+                                            <select class="form-select" required>
+                                                <option value="">-- Select the Service --</option>
+                                                <option value="CRM">CRM</option>
+                                                <option value="Websites">Websites</option>
+                                                <option value="Web Applications">Web Applications</option>
+                                                <option value="Mobile Apps">Mobile Apps</option>
+                                                <option value="Logo Designs">Logo Designs</option>
+                                                <option value="E-Commerce Websites">E-Commerce Websites</option>
+                                            </select>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn request_a_call w-100"
+                                                    style="background-image: linear-gradient(to bottom, #DC9401, #F9B938);color: #fff;">REQUEST
+                                                A CALL BACK</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        {!! $pageDetail->footerHtml->html_with ?? '' !!}
+    </main>
+    {!! $configurations->global_footer_scripts !!}
+    <script>
+        const blogsSection = document.querySelector(".blogs-section");
+    const leftForm = document.getElementById("leftForm");
+    const rightForm = document.getElementById("rightForm");
+    const leftWrapper = document.getElementById("leftStickyWrapper");
+    const rightWrapper = document.getElementById("rightStickyWrapper");
+
+    window.addEventListener("scroll", () => {
+        if (window.innerWidth <= 991) {
+            // On mobile, reset sticky
+            leftForm.classList.remove("floating", "stop-sticky");
+            rightForm.classList.remove("floating", "stop-sticky");
+            leftForm.style.width = "100%";
+            rightForm.style.width = "100%";
+            return;
+        }
+
+        const sectionTop = blogsSection.offsetTop;
+        const sectionBottom = sectionTop + blogsSection.offsetHeight;
+
+        const scrollY = window.scrollY;
+        const formHeight = leftForm.offsetHeight;
+
+        const shouldStick = scrollY > sectionTop && scrollY + formHeight + 20 < sectionBottom;
+
+        if (shouldStick) {
+            leftForm.classList.add("floating");
+            leftForm.classList.remove("stop-sticky");
+
+            rightForm.classList.add("floating");
+            rightForm.classList.remove("stop-sticky");
+
+            leftForm.style.width = leftWrapper.offsetWidth + "px";
+            rightForm.style.width = rightWrapper.offsetWidth + "px";
+        } else if (scrollY + formHeight + 20 >= sectionBottom) {
+            leftForm.classList.remove("floating");
+            leftForm.classList.add("stop-sticky");
+ 
+            rightForm.classList.remove("floating");
+            rightForm.classList.add("stop-sticky");
+        } else {
+            leftForm.classList.remove("floating", "stop-sticky");
+            rightForm.classList.remove("floating", "stop-sticky");
+
+            leftForm.style.width = "100%";
+            rightForm.style.width = "100%";
+        }
+    });
+
+        </script>
+    </body>
+    </html>
